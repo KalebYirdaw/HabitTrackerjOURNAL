@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@android:drawable/ic_menu_today"
+        android:title="Habits" />
+    <item
+        android:id="@+id/nav_stats"
+        android:icon="@android:drawable/ic_menu_agenda"
+        android:title="Stats" />
+    <item
+        android:id="@+id/nav_journal"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="Journal" />
+    <item
+        android:id="@+id/nav_setting"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="Setting" />
+</menu>

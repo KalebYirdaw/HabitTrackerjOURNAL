@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvJournalTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="JOURNAL"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="26sp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvJournalSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvJournalTitle"
+        android:text="This is all you!"
+        android:textAlignment="center"
+        android:textColor="#757575"
+        android:textSize="13sp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Toggle Buttons for Journal Content tabs -->
+    <LinearLayout
+        android:id="@+id/layoutToggleButtons"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/tvJournalSubtitle"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/tabDailyComments"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="DAILY COMMENTS"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bg_toggle_selected"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/tabGallery"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="GALLERY"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+    <!-- Gallery View Container -->
+    <RelativeLayout
+        android:id="@+id/layoutGalleryContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutToggleButtons"
+        android:visibility="gone">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvGallery"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:clipToPadding="false"
+            android:paddingBottom="80dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="24dp"
+            android:text="Add a photo"
+            android:textAllCaps="false"
+            app:cornerRadius="24dp"
+            android:elevation="6dp"
+            android:paddingHorizontal="24dp" />
+
+        <LinearLayout
+            android:id="@+id/layoutGalleryEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:src="@android:drawable/ic_menu_gallery"
+                android:contentDescription="Gallery Icon"
+                android:alpha="0.6" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Journal Gallery"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Capture and view memories attached to your daily habits."
+                android:textAlignment="center"
+                android:textColor="#757575"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Daily Comments Section -->
+    <RelativeLayout
+        android:id="@+id/layoutDailyComments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutToggleButtons">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvJournalEntries"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="80dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="24dp"
+            android:text="Add a comment"
+            android:textAllCaps="false"
+            app:cornerRadius="24dp"
+            android:elevation="6dp"
+            android:paddingHorizontal="24dp" />
+
+    </RelativeLayout>
+
+    <!-- Empty state message -->
+    <TextView
+        android:id="@+id/tvEmptyJournal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="No entries yet."
+        android:gravity="center"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Habitude</string>
+
+
+    <string name="habit_title">Habit Title</string>
+    <string name="minus_sign">-</string>
+    <string name="plus_sign">+</string>
+    <string name="recorded_value">0.0</string>
+    <string name="target_value">/0 steps</string>
+    <string name="add_button">Add</string>
+
+    <string name="description">Description</string>
+    <string name="target_value_title">Target Value</string>
+    <string name="target_unit_title">Target Unit</string>
+    <string name="save_changes_btn_title">Save Changes</string>
+    <string name="edit_habit_title">Edit Habit</string>
+
+    <string name="add_habit_title">Add Habit</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+
+    <!-- Registration screen text -->
+    <string name="register">REGISTER</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="verify_password">Verify Password</string>
+    <string name="already_have_account">Already have an account? LOG IN</string>
+    <string name="habitude">Habitude</string>
+    <string name="habit_tracker">habit tracker</string>
+    <string name="google_signup">Sign in with Google</string>
+
+
+
+
+</resources>

@@ -1,0 +1,24 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:layout_width="108dp"
+    android:height="108dp"
+    android:layout_height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Background Teal Circle -->
+    <path
+        android:fillColor="#159B78"
+        android:pathData="M54,18 A36,36 0 1,0 54,90 A36,36 0 1,0 54,18 Z" />
+
+    <!-- Outer White Flame/Drop Outer Shape -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,30 C54,30 67,46 67,58 C67,65.18 61.18,71 54,71 C46.82,71 41,65.18 41,58 C41,46 54,30 54,30 Z" />
+
+    <!-- Inner Yellow Flame/Drop Center -->
+    <path
+        android:fillColor="#FFB81C"
+        android:pathData="M54,43 C54,43 60,52 60,57 C60,60.31 57.31,63 54,63 C50.69,63 48,60.31 48,57 C48,52 54,43 54,43 Z" />
+
+</vector>
